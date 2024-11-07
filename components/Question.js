@@ -37,9 +37,9 @@ const Question = ({ options, image,resetObj, answerObj, mainAnswer,
 
 
   return (
-    <View style={{ marginVertical: 10 }}>
+    <View style={{ marginVertical: 10, borderBottomWidth:1, padding:2, borderColor:'light-gray', }}>
       <View>
-        <Text style={{ color: "gray" }}>What animal is this?</Text>
+        <Text style={{ color: "gray", }}>What animal is this?</Text>
 
         {/* Select options */}
 
@@ -52,7 +52,7 @@ const Question = ({ options, image,resetObj, answerObj, mainAnswer,
         />
 
         {/* image */}
-        <Image source={image} style={{ width: "100%", height: 400 }} />
+        <Image source={image} style={{ width: "100%", height: 400, marginBottom:20 }} />
       </View>
 
      
@@ -62,4 +62,6 @@ const Question = ({ options, image,resetObj, answerObj, mainAnswer,
 
 export default Question;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+
+});

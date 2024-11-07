@@ -75,17 +75,17 @@ export default function App() {
     }
   }
 
-  
+
   return (
     <View style={styles.container}>
-      <View style={{flexDirection:'row', alignItems:'center',marginVertical:5}}>
+      <View style={{flexDirection:'row', alignItems:'center',marginVertical:5,}}>
         {/* <FontAwesome5 name="cat" size={24} color="black" /> */}
         <MaterialIcons name="quiz" size={24} color="black" />
-        <Text style={{marginLeft:10}}>Animals Quiz App</Text>
+        <Text style={{marginLeft:10, fontWeight:'bold'}}>Animals Quiz App</Text>
       </View>
-     
+
       <ScrollView>
-      
+
       {options?.map((option, index)=>(
         <Question key={index} resetObj={{isReset,setIsReset}} answerObj={{answer,setAnswer}} options={options} mainAnswer={option.label} image={option.image} questionSequence={index++}/>
       ))}
@@ -97,7 +97,7 @@ export default function App() {
         setIsReset(true)
       }} title='reset'/>
 
-      <Text>{JSON.stringify(answer)}</Text>
+      {/* <Text>{JSON.stringify(answer)}</Text> */}
       </ScrollView>
     </View>
   );
@@ -106,8 +106,10 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+
     marginTop:60,
-    margin:10
+    margin:10,
+    backgroundColor:'whitesmoke',
+    padding:2
   },
 });
